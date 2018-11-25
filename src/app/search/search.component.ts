@@ -29,6 +29,7 @@ export class SearchComponent implements OnInit {
         this.movie = movie;
       }
       this.searching = false;
+      this.error = undefined;
     }, (error) => {
       console.log(error);
       this.searching = false;
