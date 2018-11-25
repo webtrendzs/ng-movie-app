@@ -1,0 +1,24 @@
+<div class="ui text container" [ngClass]="{'loading': loading}">
+    <h1 class="ui center aligned header">
+      Featured Movies
+    </h1>
+  <div class="ui two column stackable grid">
+    <div class="column" *ngFor="let movie of movies | async">
+      <div  class="ui fluid card" *ngIf="movie">
+        <div class="content">
+          <div class="header">{{movie.title}} ({{movie.year}})</div>
+          <div class="image">
+            <img [src]="movie.poster">
+          </div>
+          <div class="description">
+            <h4>Awards</h4>
+            <p><em>{{movie.awards}}</em></p>
+            <h4>Plot</h4>
+            <p [innerHTML]="movie.plot | ellipsis"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
