@@ -278,9 +278,6 @@ MIT
 @angular/forms
 MIT
 
-@ng-select/ng-select
-MIT
-
 zone.js
 MIT
 The MIT License
